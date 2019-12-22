@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>프로젝트 UI개발 작업리스트</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<script type="text/javascript" src="./js/lib/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/plugin/guide/guide.js"></script>
+		<link rel="stylesheet" type="text/css" href="./js/plugin/guide/guide.css" >
+	</head>
+	<body>
+
+		<div class="container">
+			<!-- s: header -->
+			<div class="header">
+				<h1>[ Title ]</h1>
+				<ul>
+					<li><strong>UI개발 담당자</strong> </li>
+					<li><strong>작업 시작일</strong> </li>
+					<li><strong>버전</strong> </li>
+				</ul>
+			</div>
+			<!-- e: header -->
+
+			<div class="section">
+				<div class="content">
+					<table id="focus">
+						<colgroup>6
+							<col width="4%" />
+							<col width="10%" />
+							<col width="10%" />
+							<col width="10%" />
+							<col width="10%" />
+							<col width="10%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">Num</th>
+								<th scope="col">모튤</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">LINK</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td></td>
+								<td class="tit_page01"></td>
+								<td class="tit_page02"></td>
+								<td class="tit_page03"></td>
+								<td class="tit_page04"></td>
+								<td><a href="html/.html" target="_blank">페이지 이동</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#focus').tableHover({rowClass: 'hover'});
+				var tds = $("#focus tbody td:first-child");
+				for (var i = 0; i < tds.length; i++) {
+					$(tds[i]).html(i + 1);
+				}
+			});
+		</script>
+	</body>
+</html>
